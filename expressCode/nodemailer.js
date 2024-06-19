@@ -13,8 +13,12 @@ async function senderMail(OTP,receiver){
         from : `${process.env.MY_MAIL}`,
         to : receiver,
         subject : "Link To Reset Your Password",
-        html : `<div>Your OTP key is <a href='#'>${OTP}</a><p>Please DONOT Share the provided Unique Key to anyone</p>
-        <p>Click <span><a href="${process.env.RESET}${receiver}">Reset Link</a></span><p></div>`
+        html :  `
+            <div>
+                Your OTP key is <a href="#">${OTP}</a>
+                <p>Please DO NOT share the provided unique key with anyone</p>
+                <p>Click <a href="${process.env.RESET}${receiver}">Reset Link</a></p>
+            </div>`
     })
 }
 

@@ -15,7 +15,7 @@ async function senderMail(OTP,receiver){
         subject : "Link To Reset Your Password",
         html :  `
             <div>
-                Your OTP key is <a href="#">${OTP}</a>
+                Your OTP key is ${OTP}
                 <p>Please DO NOT share the provided unique key with anyone</p>
                 <p>Click <a href="${process.env.RESET}${receiver}">Reset Link</a></p>
             </div>`

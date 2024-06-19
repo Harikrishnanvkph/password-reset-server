@@ -17,7 +17,7 @@ async function senderMail(OTP,receiver){
             <div>
                 Your OTP key is ${OTP}
                 <p>Please DO NOT share the provided unique key with anyone</p>
-                <p>Click <a href="${process.env.RESET}${receiver}">Reset Link</a></p>
+                <p>Click <a href="https://main--charming-moonbeam-f52265.netlify.app/validate/${receiver}">Reset Link</a></p>
             </div>`
     })
 }
